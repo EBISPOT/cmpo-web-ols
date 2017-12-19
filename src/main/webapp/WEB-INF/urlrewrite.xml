@@ -30,24 +30,38 @@
     <rule>
         <condition name="Accept" type="header">application/rdf\+xml</condition>
         <from>^/$</from>
-        <to type="redirect" last="true">https://raw.githubusercontent.com/EBISPOT/CMPO/master/release/cmpo.owl</to>
+        <to type="redirect" last="true">https://raw.githubusercontent.com/EBISPOT/CMPO/master/cmpo.owl</to>
+    </rule>
+
+    <rule>
+        <from>^.*/releases/(.*)/cmpo.owl</from>
+        <to type="redirect" last="true">https://raw.githubusercontent.com/EBISPOT/CMPO/$1/cmpo.owl</to>
     </rule>
 
     <rule>
         <from>^(.*)/cmpo.owl</from>
-        <to type="redirect" last="true">https://raw.githubusercontent.com/EBISPOT/CMPO/master/release/cmpo.owl</to>
+        <to type="redirect" last="true">https://raw.githubusercontent.com/EBISPOT/CMPO/master/cmpo.owl</to>
+    </rule>
+
+    <rule>
+        <from>^.*/releases/(.*)/cmpo-simple.owl</from>
+        <to type="redirect" last="true">https://raw.githubusercontent.com/EBISPOT/CMPO/$1/cmpo-simple.owl</to>
     </rule>
 
     <rule>
         <from>^(.*)/cmpo-simple.owl</from>
-        <to type="redirect" last="true">https://raw.githubusercontent.com/EBISPOT/CMPO/master/release/cmpo-simple.owl</to>
+        <to type="redirect" last="true">https://raw.githubusercontent.com/EBISPOT/CMPO/master/cmpo-simple.owl</to>
     </rule>
 
 
+    <rule>
+        <from>^.*/releases/(.*)/cmpo.obo</from>
+        <to type="redirect" last="true">https://raw.githubusercontent.com/EBISPOT/CMPO/$1/cmpo.obo</to>
+    </rule>
 
     <rule>
         <from>^(.*)/cmpo.obo</from>
-        <to type="redirect" last="true">https://raw.githubusercontent.com/EBISPOT/CMPO/master/release/cmpo.obo</to>
+        <to type="redirect" last="true">https://raw.githubusercontent.com/EBISPOT/CMPO/master/cmpo.obo</to>
     </rule>
 
 
